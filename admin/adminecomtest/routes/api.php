@@ -6,6 +6,9 @@ use App\Http\Controllers\Admin\VisitController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\SitefooterController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductlistController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\ProductDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +36,16 @@ Route::get('/siteinfo', [SitefooterController::class, 'sitefooter']);
 
 //category
 Route::get('/allcategory', [CategoryController::class, 'allcategory']);
+//product_List
+Route::get('/productlistbyremark/{remark}', [ProductlistController::class, 'productlist']);
+
+Route::get('/productlistbycategory/{category}', [ProductlistController::class, 'productlistbycategory']);
+Route::get('/productlistbysubcategory/{category}/{subcategory}', [ProductlistController::class, 'productlistbysubcategory']);
+
+//Slider
+Route::get('/allslider', [SliderController::class, 'allslider']);
+
+//productDetails
+Route::get('/product/details/{id}', [ProductDetailsController::class, 'productdetails']);
+
+
