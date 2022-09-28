@@ -14,8 +14,9 @@ class ProductDetailsController extends Controller
         $productList = Product_list::where('id', $id)->get();
 
         $Item = [
-            'productList' =>$productList,
-            'productDetails' =>$productDetailsList
+
+            'productDetails' =>$productDetailsList,
+            'productList' =>$productList
         ];
         return $Item;
 

@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductlistController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ProductDetailsController;
-
+use App\Http\Controllers\Admin\NotificationController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -44,8 +44,12 @@ Route::get('/productlistbysubcategory/{category}/{subcategory}', [ProductlistCon
 
 //Slider
 Route::get('/allslider', [SliderController::class, 'allslider']);
-
-//productDetails
+//ProductDetails
 Route::get('/product/details/{id}', [ProductDetailsController::class, 'productdetails']);
+//notification
+Route::get('/notification', [NotificationController::class, 'notification']);
+//search
+Route::get('/search/{key}', [ProductlistController::class, 'productbysearch']);
+
 
 
